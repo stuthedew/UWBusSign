@@ -38,7 +38,7 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-var settings = {httpRoot:"/red", userDir:"node_modules/node-red", flowFile:"node_modules/node-red/flows_expresstest.json"};
+var settings = {httpRoot:"/red", userDir:"node_modules/node-red", flowFile:"flows_bus_data.json"};
 
 app.get('/', routes.index);
 app.get('/busTimes', routes.busTimes(db));
