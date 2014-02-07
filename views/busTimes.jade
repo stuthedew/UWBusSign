@@ -1,0 +1,26 @@
+extends stuLayout
+
+
+
+block content
+    h1.
+        Highland and Marsh (EB)
+    div
+      table
+        thead
+          tr: th Route
+              th Destination
+              th Arriving in
+        tbody
+          each bus in busTimes
+              tr
+                div
+                  td <strong style="font-size:1.5em"> #{bus.route}
+
+                td #{bus.dest}
+
+                td <strong style="font-size:1.5em"> #{bus.time} </strong> minutes
+
+
+     f
+        h3 Last Updated #{moment().format('MMMM Do, YYYY, h:mm a')}
