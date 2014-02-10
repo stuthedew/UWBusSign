@@ -12,6 +12,7 @@ block content
               th Destination
               th Arriving in
         tbody
+
           each bus in busTimes
               tr
                 div
@@ -19,8 +20,10 @@ block content
 
                 td #{bus.dest}
 
-                td <strong style="font-size:1.5em"> #{bus.time} </strong> minutes
-
+                if bus.time !=1
+                  td <strong style="font-size:1.5em"> #{bus.time} </strong> minutes
+                else
+                  td <strong style="font-size:1.5em"> #{bus.time} </strong> minute
 
      f
         h3 Last Updated #{moment(busTimes[0].uTime).format('MMMM Do, YYYY, h:mm a')}
