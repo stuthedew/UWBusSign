@@ -2,6 +2,7 @@
 body {
   padding: 15px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  height: 100%
 }
 
 a {
@@ -66,7 +67,7 @@ tr:nth-child(even)		{
 }
 
 
-f {
+h3 {
 text-align:center;
-  font-size:1.2em;
+font-size:2em;
 }
