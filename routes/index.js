@@ -9,12 +9,17 @@ exports.index = function(req, res){
 
 
 exports.busTimes = function(db) {
+
     return function(req, res) {
-      db.data.find({time: {$gte: 0}}).sort({time:1}).limit(6, function(e,docs){
+
+      db.runCommand({aggregate: "data", pipeline: [{$group: {_id:0, minTime: {$min: "$uTime"}}}]}, function(err, r){
+      var upTime = r.result[0].minTime;
+      db.data.find({uTime: upTime}).sort({time:1}).limit(6, function(e,docs){
           res.render('busTimes', {
                 "busTimes" : docs
+            });
+
             });
         });
     };
 };
-
