@@ -41,11 +41,11 @@ sudo mkdir /opt/node
 sudo cp -r node-v0.10.2-linux-arm-pi/* /opt/node
 ```
 
-Add the node directory to the `PATH` variable:
+Add the node directory to `PATH`:
 ```sh
 sudo nano /etc/profile
 ```
-Add the following lines after the last line:
+Add the following lines to `etc/profile` after the last line:
 ```sh
 ...
 NODE_JS_HOME="/opt/node"
@@ -90,3 +90,38 @@ sudo screen -Dms sconsInstall sudo scons --prefix=/opt/mongo install
 scons -c
 ```
 
+##Start UWBusSign App
+
+###Step 1 - Configure MongoDB to autostart.
+
+1.. Add the mongoDB directory to `PATH`:
+```sh
+sudo nano /etc/profile
+```
+
+2.. Add the following lines to `etc/profile` after the last line:
+```sh
+...
+MONGODB_HOME="/opt/mongo"
+PATH="$PATH:MONGODB_HOME_JS_HOME/bin"
+export PATH
+```
+3.. Create database directory:
+```sh
+#Assumes you are using a usb thumb drive and have usbmount installed (from install step 1).
+#Database file will be updated frequently. Using a flash drive will increase the longevity of the Raspberry Pi SD card.
+
+sudo mkdir /media/usb/mongoDB
+sudo mkdir /media/usb/mongoDB/data
+```
+
+4.. Add the following to `/etc/rc.local` after the last line:
+
+```sh
+...
+
+sudo screen -dmS mongo ./mongod --dbpath /media/usb/mongoDB/data
+# Access session using 'sudo screen -r mongo'. Detach with Ctl-A-D.
+```
+
+###Step 2 - Configure UWBusSign App to autostart
