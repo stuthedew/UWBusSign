@@ -44,7 +44,6 @@ sudo cp -r node-v0.10.2-linux-arm-pi/* /opt/node
 Add the node directory to the `PATH` variable:
 ```sh
 sudo nano /etc/profile
-
 ```
 Add the following lines after the last line:
 ```sh
@@ -52,7 +51,6 @@ Add the following lines after the last line:
 NODE_JS_HOME="/opt/node"
 PATH="$PATH:$NODE_JS_HOME/bin"
 export PATH
-...
 ```
 
 Reboot to apply changes.
