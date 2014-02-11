@@ -103,7 +103,7 @@ sudo nano /etc/profile
 ```sh
 ...
 MONGODB_HOME="/opt/mongo"
-PATH="$PATH:MONGODB_HOME_JS_HOME/bin"
+PATH="$PATH:MONGODB_HOME/bin"
 export PATH
 ```
 3.. Create database directory:
