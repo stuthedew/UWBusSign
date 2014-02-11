@@ -7,7 +7,7 @@ This is a node.js app to display the bus arrival times for the Madison (WI) Metr
 ![alt text](https://raw.github.com/stuthedew/UWBusSign/master/public/images/Screenshot.png "UWBus sign screenshot")
 
 
-##Install on Raspberry Pi
+##Install on Raspberry Pi (running a stand-alone scheme)
 This setup assumes you have a Raspberry Pi up and running (locales set, root directory expanded etc). If not, run `sudo raspi-config` and follow prompts.
 
 ### Step 1 - Update and install dependencies.
@@ -60,4 +60,7 @@ Reboot to apply changes.
 sudo reboot
 ```
 
-### Step 3
+### Step 3 - Install UWBusSign
+
+
+
