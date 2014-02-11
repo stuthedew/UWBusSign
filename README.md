@@ -10,8 +10,8 @@ This is a node.js app to display the bus arrival times for the Madison (WI) Metr
 ##Install on Raspberry Pi
 This setup assumes you have a Raspberry Pi up and running (locales set, root directory expanded etc). If not, run `sudo raspi-config` and follow prompts.
 
+### Step 1 - Update and install dependencies.
 
-### Step 1 - Install Node.js
 
 Make sure you're running the current version of Raspbian:
 ```
@@ -26,12 +26,14 @@ sudo apt-get upgrade
 sudo apt-get install
 ```
 
-Install required dependinces:
+Install required dependencies:
 ```
 sudo apt-get install git-core git scons build-essential scons libpcre++-dev xulrunner-dev libboost-dev libboost-program-options-dev libboost-thread-dev libboost-filesystem-dev screen 
 ```
 
-Install Node.js:
+### Step 2 - Install Node.js.
+
+Get Node.js and install:
 ```
 wget http://nodejs.org/dist/v0.11.10/node-v0.11.10-linux-arm-pi.tar.gz
 tar -xvzf node-v0.11.10-linux-arm-pi.tar.gz
@@ -39,12 +41,12 @@ sudo mkdir /opt/node
 sudo cp -r node-v0.10.2-linux-arm-pi/* /opt/node
 ```
 
-Add the node directy to the `PATH` variable:
+Add the node directory to the `PATH` variable:
 ```
 sudo nano /etc/profile
 
 ```
-Add the following lines afer the last line:
+Add the following lines after the last line:
 ```
 ...
 NODE_JS_HOME="/opt/node"
@@ -58,4 +60,4 @@ Reboot to apply changes.
 sudo reboot
 ```
 
-
+### Step 3
