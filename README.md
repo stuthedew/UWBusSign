@@ -28,7 +28,7 @@ sudo apt-get install
 
 Install required dependencies:
 ```
-sudo apt-get install git-core git scons build-essential scons libpcre++-dev xulrunner-dev libboost-dev libboost-program-options-dev libboost-thread-dev libboost-filesystem-dev screen 
+sudo apt-get install git-core git scons build-essential scons libpcre++-dev xulrunner-dev libboost-dev libboost-program-options-dev libboost-thread-dev libboost-filesystem-dev screen usbmount
 ```
 
 ### Step 2 - Install Node.js.
@@ -60,7 +60,28 @@ Reboot to apply changes.
 sudo reboot
 ```
 
-### Step 3 - Install UWBusSign
+### Step 3 - Install UWBusSign.
 
+```
+git clone git://github.com/stuthedew/UWBusSign.git
+cd UWBusSign
+npm install
+```
 
+### Step 4 - Install MongoDB.
+
+```
+git clone git://github.com/RickP/mongopi.git
+cd mongopi
+```
+
+```
+scons
+```
+(Takes a LONG time to build)
+
+```
+sudo scons --prefix=/opt/mongo install
+scons -c
+```
 
