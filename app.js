@@ -8,16 +8,15 @@ var routes = require('./routes');
 var http = require('http');
 var path = require('path');
 var RED = require("node-red");
-
+var stopSettingsFile =  "./stopSettings";
+var stop = require(stopSettingsFile);
 var databaseUrl = "data"; // "username:password@example.com/mydb"
 var collections = ["data"]
 var db = require("mongojs").connect(databaseUrl, collections);
 
-// New Code
-var mongo = require('mongodb');
-
 var app = express();
 app.locals.moment = require('moment');
+
 
 // all environments
 app.set('port', process.env.PORT || 3000);
