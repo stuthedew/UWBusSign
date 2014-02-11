@@ -78,13 +78,13 @@ sudo screen -Dms sconsBuild sudo scons
 ```
 
 (Also takes a long time).
-**Optional**: View build process using `sudo screen -r sconsBuild`. Exit with `ctl-a-d`.
+**Optional**: View build process using `sudo screen -r sconsBuild`. Detach with `Ctl-A-D`.
 
 ```sh
 sudo screen -Dms sconsInstall sudo scons --prefix=/opt/mongo install
 ```
 
-**Optional**: View build process using `sudo screen -r sconsInstall`. Exit with `ctl-a-d`.
+**Optional**: View build process using `sudo screen -r sconsInstall`. Detach with `Ctl-A-D`.
 
 ```sh
 scons -c
