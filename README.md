@@ -125,3 +125,11 @@ sudo screen -dmS mongo ./mongod --dbpath /media/usb/mongoDB/data
 ```
 
 ###Step 2 - Configure UWBusSign App to autostart
+
+1.. Add the following to `/etc/rc.local` after the last line:
+
+```sh
+...
+cd /home/pi/UWBusSign
+node app.js
+```
