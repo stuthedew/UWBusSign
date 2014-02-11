@@ -69,22 +69,25 @@ npm install
 ```
 
 ### Step 4 - Install MongoDB.
-
 ```sh
 git clone git://github.com/RickP/mongopi.git
 cd mongopi
 ```
+
 (Takes a **LONG** time to build. )
 ```sh
 sudo screen -Dms sconsBuild sudo scons 
 ```
-**Optional**: View build process using `sudo screen -r sconsBuild`. Exit with 'ctl-a-d'.
+
 (Also takes a long time).
+**Optional**: View build process using `sudo screen -r sconsBuild`. Exit with 'ctl-a-d'.
+
 ```sh
 sudo screen -Dms sconsInstall sudo scons --prefix=/opt/mongo install
-``` 
-**Optional**: View build process using `sudo screen -r sconsInstall`. 
-Exit with ctl-a-d.
+```
+
+**Optional**: View build process using `sudo screen -r sconsInstall`. Exit with 'ctl-a-d'.
+
 ```sh
 scons -c
 ```
