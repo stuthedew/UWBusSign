@@ -10,6 +10,7 @@
     	"jade": "*",
     	"node-red": "*",
 	    "moment": "*",
+      "mongo": "*",
       "mongojs": "*"
   },
   "dev-dependencies":{
