@@ -10,10 +10,10 @@
     	"jade": "*",
     	"node-red": "*",
 	    "moment": "*",
-      "mongo": "*",
+      "mongodb": "*",
       "mongojs": "*"
   },
-  "dev-dependencies":{
+  "devDependencies":{
   "mkdir": "*"
 }
 }
