@@ -3,9 +3,8 @@ extends stuLayout
 
 
 block content
-    h1.
-        Highland and Marsh (EB)
-    div
+      h1 Highland and Marsh (EB)
+
       table
         thead
           tr: th Route
@@ -16,14 +15,13 @@ block content
           each bus in busTimes
               tr
                 div
-                  td <strong style="font-size:1.5em"> #{bus.route}
+                  td <strong style="font-size:1.3em"> #{bus.route}
 
                 td #{bus.dest}
 
                 if bus.time !=1
-                  td <strong style="font-size:1.5em"> #{bus.time} </strong> minutes
+                  td <strong style="font-size:1.3em"> #{bus.time} </strong> minutes
                 else
-                  td <strong style="font-size:1.5em"> #{bus.time} </strong> minute
+                  td <strong style="font-size:1.3em"> #{bus.time} </strong> minute
 
-
-       h3 Last Updated #{moment(busTimes[0].uTime).format('MMMM Do, YYYY, h:mm a')}
+      h3 Last Updated #{moment(busTimes[0].uTime).format('MMMM Do, YYYY h:mm a')}

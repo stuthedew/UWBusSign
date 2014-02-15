@@ -47,8 +47,13 @@ var server = http.createServer(app);
 RED.init(server,settings);
 app.use(settings.httpRoot,RED.app);
 
-server.listen(app.get('port'), function(){
+server.listen(app.get('port'), function(err){
+  if(err){
+  console.log(err);
+  }
+  else{
   console.log('Express server listening on port ' + app.get('port'));
+  };
 });
 
 RED.start();
