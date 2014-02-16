@@ -11,7 +11,7 @@ exports.index = function(req, res){
 exports.busTimes = function(db) {
 
     return function(req, res) {
-
+try{
       db.runCommand({aggregate: "data", pipeline: [{$group: {_id:0, minTime: {$min: "$uTime"}}}]}, function(err, r){
       var upTime = r.result[0].minTime;
       db.data.find({uTime: upTime}).sort({time:1}).limit(6, function(e,docs){
@@ -21,5 +21,7 @@ exports.busTimes = function(db) {
 
             });
         });
+}
+    finally{};
     };
 };

@@ -17,11 +17,14 @@ block content
                 div
                   td <strong style="font-size:1.3em"> #{bus.route}
 
-                td #{bus.dest}
+                  td #{bus.dest}
 
-                if bus.time !=1
-                  td <strong style="font-size:1.3em"> #{bus.time} </strong> minutes
-                else
-                  td <strong style="font-size:1.3em"> #{bus.time} </strong> minute
+                  if bus.time > 1
+                    td <strong style="font-size:1.3em"> #{bus.time} </strong> minutes
+                  else if bus.time == 1
+                    td <strong style="font-size:1.3em"> #{bus.time} </strong> minute
+                  else
+                    td <em><strong style="font-size:1.3em; color:#980000"> Arriving </strong></em>
+
 
       h3 Last Updated #{moment(busTimes[0].uTime).format('MMMM Do, YYYY h:mm a')}
